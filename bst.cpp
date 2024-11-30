@@ -122,13 +122,9 @@ int main()
     in_order(root);
     cout << endl;
 
-    BST_Node* f = search_node(root, 0);
-    if (f != nullptr) {
-        cout << "0 найдено";
-    }
-    else {
-        cout << "0 нет";
-    }
+    cout << "3 есть в дереве? " << (search_node(root, 3) ? "Да" : "Нет") << endl;
+    cout << "0 есть в дереве? " << (search_node(root, 0) ? "Да" : "Нет") << endl;
+    cout << "16 есть в дереве? " << (search_node(root, 16) ? "Да" : "Нет") << endl;
 
     return 0;
 
