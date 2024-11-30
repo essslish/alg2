@@ -122,32 +122,30 @@ int main()
     setlocale(LC_ALL, "Russian");
     AVL_Node* root = nullptr;
 
-    root = insert(root, 44);
-    root = insert(root, 33);
     root = insert(root, 10);
-    root = insert(root, 81);
-    root = insert(root, 4);
-    root = insert(root, 16);
-    root = insert(root, 3);
-    root = insert(root, 55);
+    root = insert(root, 5);
+    root = insert(root, 15);
+    root = insert(root, 20);
+    root = insert(root, 12);
 
-    cout << "Дерево по порядку:";
+    cout << "Дерево по порядку: ";
     in_order(root);
     cout << endl;
-
-    root = remove(root, 3);
-    cout << "После удаления 3: ";
+    
+    root = remove(root, 10);
+    cout << "После удаления 10: ";
     in_order(root);
     cout << endl;
-
+    
     root = insert(root, 0);
     cout << "После вставки 0: ";
     in_order(root);
     cout << endl;
-
+    
+    cout << "Есть ли 10 в дереве?" << (search(root, 10) ? " Да" : " Нет") << endl;
+    cout << "Есть ли 5 в дереве?" << (search(root, 5) ? " Да" : " Нет") << endl;
     cout << "Есть ли 0 в дереве?" << (search(root, 0) ? " Да" : " Нет") << endl;
-    cout << "Есть ли 3 в дереве?" << (search(root, 3) ? " Да" : " Нет") << endl;
-
+    
     return 0;
 }
 
