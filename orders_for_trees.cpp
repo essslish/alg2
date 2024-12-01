@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-void pre_order(BST_Node* node) {
+void pre_order(BST_Node* node) { //вместо BST_Node* заменять на  AVL_Node* или rb_node*
     if (node) {
         cout << node->data << " ";
         pre_order(node->left);
