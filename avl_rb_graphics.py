@@ -378,8 +378,6 @@ def main():
     plt.title("Сравнение времени вставки")
     plt.legend()
 
-
-    #Plot for deletion times
     plt.subplot(2, 2, 2)
     plt.scatter(x_rb, rb_delete_times, s=10)
     plt.plot(x_rb, coeffs_rb_delete[0] * np.log(x_rb) + coeffs_rb_delete[1], color='red', label=f"RB: y = {coeffs_rb_delete[0]:.2f}log(x) + {coeffs_rb_delete[1]:.2f}")
@@ -389,8 +387,7 @@ def main():
     plt.ylabel("Время удаления (нс)")
     plt.title("Сравнение времени удаления")
     plt.legend()
-
-    #Plot for heights
+    
     plt.subplot(2, 2, 3)
     plt.scatter(x_rb, rb_heights, s=10)
     plt.plot(x_rb, coeffs_rb_height[0] * np.log(x_rb) + coeffs_rb_height[1], color='red', label=f"RB: y = {coeffs_rb_height[0]:.2f}log(x) + {coeffs_rb_height[1]:.2f}")
