@@ -1,4 +1,4 @@
-void pre_order(BST_Node* node) { //вместо BST_Node* заменять на  AVL_Node* или rb_node*
+void pre_order(BST_Node* node) { //вместо BST_Node* заменять на  AVL_Node*, реализация обходов для RB tree в файле rb.cpp
     if (node) {
         cout << node->data << " ";
         pre_order(node->left);
